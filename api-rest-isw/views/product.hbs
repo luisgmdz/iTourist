@@ -1,0 +1,22 @@
+<script type="text/javascript">
+
+let restaurantList = document.createElement('ul')
+
+const myHeaders = new Headers();
+
+myHeaders.append('authorization', `Bearer ${localStorage.token}`)
+  fetch('/api/restaurant',{
+    method: 'GET',
+    headers: myHeaders
+  })
+  .then (res => res.json())
+  .then( data =>{
+    data.restaurants.map(restaurant =>{
+    let text = document.createTextNode(restaurant.name)
+    let elem = document.createElement('li')
+    elem.appendChild(text)
+    restaurantList.appendChild(elem)
+  })
+document.body.appendChild(restaurantList)
+})
+</script>
