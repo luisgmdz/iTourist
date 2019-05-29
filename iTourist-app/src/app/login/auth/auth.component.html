@@ -1,3 +1,68 @@
-<p>
-  auth works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-6" id="enter">
+      <div class="logo-image">
+      </div>
+
+      <h3>Inicio de sesión</h3>
+      <form action="" method="" class="" role="form">
+        <div id="form-login-username" class="input-group">
+          <input id="username" class="input-field" name="username" placeholder="Usuario" type="text" size="18"
+            alt="login" required />
+        </div>
+        <div id="form-login-password" class="input-group">
+          <input id="passwd" class="input-field" name="password" placeholder="Contraseña" type="password" size="18"
+            alt="password" required>
+        </div>
+
+        <div id="submit-buton" class="input-group">
+          <input class="btn btn-ok input-field" type="submit" name="Submit" alt="sign in" value="Ingresar">
+        </div>
+        <div>
+
+        </div>
+      </form>
+    </div>
+
+    <div class="col-6" id="enter2">
+      <div class="logo-image">
+      </div>
+
+
+      <h3>Registro de usuario</h3>
+      <form action="" name="f1" method="" class="" role="form">
+        <div id="form-login-username" class="input-group">
+          <label>Nombre(s)</label>
+          <input id="Nombre" class="input-field" name="Nombre(s)" placeholder="Nombre(s)" type="text" size="18"
+            alt="Nombre" required />
+        </div>
+        <div id="form-login-password" class="input-group">
+          <label>Nombre de usuario:</label>
+          <input id="Usuario" class="input-field" name="Usuario" placeholder="Usuario" type="text" size="18"
+            alt="Usuario" required>
+        </div>
+        <div id="form-login-password" class="input-group">
+          <label>Email:</label>
+          <input id="Email" class="input-field" name="Email" placeholder="Email" type="text" size="18" alt="Email"
+            required>
+        </div>
+        <div id="form-login-password" class="input-group">
+          <label>Contraseña:</label>
+          <input id="Contraseña" class="input-field" name="Contraseña" placeholder="Contraseña" type="password"
+            size="18" alt="Contraseña" minlength="6" required>
+        </div>
+        <div id="form-login-password" class="input-group">
+          <label>Confirmar contraseña:</label>
+          <input id="ContraseñaV" class="input-field" name="ContraseñaV" placeholder="Confirmar contraseña"
+            type="password" size="18" alt="Contraseña" required>
+        </div>
+        <div id="submit-buton" class="input-group">
+          <input class="btn btn-ok input-field" type="submit" name="Registrar" alt="sign in" value="Registrar"
+            onclick="comprobarClave()">
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
