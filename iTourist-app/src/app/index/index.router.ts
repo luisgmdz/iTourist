@@ -9,7 +9,7 @@ export const IndexRoutes: Route[]=[
         path: '',
         component: IndexComponent,
         children:[
-            {path:'', component:RestaurantesComponent},
+            {path:'restaurantes', component:RestaurantesComponent},
             {path:'nosotros', component: NosotrosComponent},
             {path:'perfil', component:PerfilComponent},
         ]},

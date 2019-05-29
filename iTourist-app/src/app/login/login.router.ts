@@ -7,7 +7,7 @@ export const LoginRoutes: Route[]=[
         path: '',
         component: LoginComponent,
         children:[
-            {path:'auth', component: AuthComponent},
+            {path:'', component: AuthComponent},
         ]
     }
 ];

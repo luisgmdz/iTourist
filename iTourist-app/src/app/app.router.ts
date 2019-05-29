@@ -3,7 +3,8 @@ import { IndexRoutes } from './index/index.router';
 import { LoginRoutes } from './login/login.router';
 import { NoPageRoutes } from './no-page/no-page.router';
 
-export const routes: Routes = [...IndexRoutes,
-                             ...LoginRoutes, 
-                             ...NoPageRoutes,
+export const routes: Routes = [
+                            ...LoginRoutes, 
+                            ...IndexRoutes,
+                            ...NoPageRoutes,
                             ];
