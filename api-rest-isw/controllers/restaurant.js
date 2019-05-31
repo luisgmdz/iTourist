@@ -31,6 +31,8 @@ function saveRestaurant(req, res) {
   restaurant.idioma=req.body.idioma
   restaurant.imagen=req.body.imagen
   restaurant.descripcion=req.body.descripcion
+  restaurant.latitud=req.body.latitud
+  restaurant.longitud=req.body.longitud
   restaurant.save((err,restaurantStored)=>{
     if(err)return res.status(500).send({message:`Error al almacenar restaurante ${err}`})
 

@@ -32,6 +32,12 @@ UserSchema.pre('save', function (next) { //se modificó el next => //"arrow func
   })
 })
 
+UserSchema.methods.comparePassword = function (candidatePassword, cb){
+  bcrypt.compare(candidatePassword, this.password, (err, isMatch)=>{
+    cb(err, isMatch)
+  })
+}
+
 UserSchema.methods.gravatar = function (){
   if(!this.email) return `https://gravatar.com/avatar/?s=200&d=retro`
   const md5 =  crypto.createHash('md5').update(this.email).digest('hex')

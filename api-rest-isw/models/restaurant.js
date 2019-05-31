@@ -8,7 +8,9 @@ nombre: String,
 direccion:String,
 idioma:String,
 imagen: String,
-descripcion: String
+descripcion: String,
+latitud: Number,
+longitud: Number
 })
 
 module.exports = mongoose.model('Restaurant', RestaurantSchema)

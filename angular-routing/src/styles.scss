@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+@import "../node_modules/bulma/bulma.sass";
+
+.mainBlock{
+  min-height:400px;
+}
+
+nav{
+  border-bottom: 1px solid #333333;
+}
+.navbar-item img {
+  min-height: 4.75rem !important;
+  min-width: 1.75rem !important;
+  padding: 0%;
+}

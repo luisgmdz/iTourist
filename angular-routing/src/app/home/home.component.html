@@ -1,0 +1,25 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <!-- navbar items, navbar burger... -->
+    <a class="navbar-item">
+        <img src="../../assets/images/icon.png" alt="iTourist" width="112" height="112">
+  </a>
+  <p class="title is-1"> iTourist</p>
+  </div>
+  <div class="navbar-menu">
+    <!-- navbar start, navbar end -->
+    <div class="navbar-end">
+      <a class="navbar-item" routerLink="/">Nosotros</a>
+      <a class="navbar-item" routerLink="/restaurantes">Restaurantes</a>
+      <a class="navbar-item" routerLink="/perfil">Perfil</a>
+      <a class="navbar-item" (click)="logoutAction()" >Logout</a>
+    </div>
+  </div>
+</nav>
+<div class="content">
+  <section class="section">
+    <div class="container mainBlock" style="background:#BB86FC">
+      <router-outlet></router-outlet>
+    </div>
+  </section>
+</div>
