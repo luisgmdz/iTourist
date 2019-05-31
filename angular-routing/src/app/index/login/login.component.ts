@@ -62,9 +62,27 @@ export class LoginComponent implements OnInit {
         }
       }
     );
-    
-    
-    
+  }
+
+  registerAction(){
+    this._authService.signup(this.postData)
+    .subscribe(
+      response =>{
+        
+          this.status="success";
+         // console.log(this.token);
+         alert("Te has registrado correctamente");
+          this._router.navigate(['']);
+        
+
+      },
+      error=>{
+        let MsnError=<any>error;
+        if(MsnError!=null){
+          this.status="error";
+        }
+      }
+    );
   }
 
 }

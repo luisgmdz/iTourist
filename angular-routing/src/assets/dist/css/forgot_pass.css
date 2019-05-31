@@ -1,0 +1,30 @@
+.form-forgot {
+    width: 330px;
+    height: 300px;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 10px;
+    padding-right: 37px;
+    padding-top: 10px;
+    background: rgb(67, 78, 90);
+  }
+  .container {
+    height: 40px;
+    width: 357px;
+    background:
+    rgb(67, 78, 90);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+label {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding-left: 15px;
+    padding-bottom: auto;
+    color: rgba(255,255,255,.7);
+    display: block;
+}

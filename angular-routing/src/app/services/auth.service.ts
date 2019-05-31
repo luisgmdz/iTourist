@@ -40,7 +40,7 @@ export class AuthService {
   //   await sessionStorage.setItem('userData',JSON.stringify(responseData));
   //   return true;
   // }
-  login(postData): Observable <any>{
+  login(postData): Observable <any>{//inicia sesion del usuario
     let params = JSON.stringify(postData);
     let headers = new HttpHeaders().set("Content-Type", "application/json");
     return this._http.post("http://localhost:3005/api/signin", params, {headers});
@@ -48,7 +48,7 @@ export class AuthService {
 
 
 
-  signup(postData){
+  signup(postData){//registra el usuario
     let params=JSON.stringify(postData);
     let headers = new HttpHeaders().set("Content-Type", "application/json");
     return this._http.post("http://localhost:3005/api/signup", params, {headers});
