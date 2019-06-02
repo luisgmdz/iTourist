@@ -1,7 +1,7 @@
 import { HomeComponent } from './home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ProductsComponent } from './products/products.component';
-import { SettingsComponent } from './settings/settings.component';
+import { DashboardComponent } from './restaurantes/dashboard.component';
+import { ProductsComponent } from './perfilrest/products.component';
+import { SettingsComponent } from './perfil/settings.component';
 
 import { Route } from '@angular/router';
 import { AuthGuard } from './../guards/auth.guard';
@@ -12,8 +12,8 @@ export const HomeRoutes: Route[]=[
     canActivate:[AuthGuard],
     children:[
         { path:"", component: DashboardComponent },
-        { path:"restaurantes", component: ProductsComponent },
         { path:"perfil", component: SettingsComponent },
+        {path: "restaurant/:id", component: ProductsComponent }
     ]
   }
 ];

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SettingsComponent } from './settings/settings.component';
-import { ProductsComponent } from './products/products.component';
+import { DashboardComponent } from './restaurantes/dashboard.component';
+import { SettingsComponent } from './perfil/settings.component';
+import { ProductsComponent } from './perfilrest/products.component';
 
 //tenemos que exportar los modulos que se usen en IndexModule
 import { FormsModule } from '@angular/forms';

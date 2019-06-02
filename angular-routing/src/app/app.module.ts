@@ -19,6 +19,7 @@ import { IndexModule } from './index/index.module';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
+import { RestauranteApiService } from './services/restaurante-api.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { LoginGuard } from './guards/login.guard';
     IndexModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [AuthService,AuthGuard,LoginGuard],
+  providers: [AuthService,AuthGuard,LoginGuard,RestauranteApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
