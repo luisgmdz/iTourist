@@ -7,9 +7,10 @@ import { ProductsComponent } from './perfilrest/products.component';
 //tenemos que exportar los modulos que se usen en IndexModule
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { RestComponent } from './rest/rest.component';
 
 @NgModule({
-  declarations: [DashboardComponent, SettingsComponent, ProductsComponent],
+  declarations: [DashboardComponent, SettingsComponent, ProductsComponent, RestComponent],
   imports: [
     CommonModule, FormsModule, RouterModule
   ]

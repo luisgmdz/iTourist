@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
   public userInfo : object;
   //datos de restaurante
   public restaurantes =[];
-  public restaurants;
+  public restaurants = new Object;
   constructor(
     private _authService: AuthService,
     private _restaurantsService: RestauranteApiService
