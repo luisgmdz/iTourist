@@ -21,6 +21,8 @@ import { AuthGuard } from './guards/auth.guard';
 import { LoginGuard } from './guards/login.guard';
 import { RestauranteApiService } from './services/restaurante-api.service';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,10 @@ import { RestauranteApiService } from './services/restaurante-api.service';
     AppRoutingModule,
     HomeModule,
     IndexModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAEAS9L6v5iaHc1Ru9i_cAeSyKkji4oyVk'
+    })
   ],
   providers: [AuthService,AuthGuard,LoginGuard,RestauranteApiService],
   bootstrap: [AppComponent]

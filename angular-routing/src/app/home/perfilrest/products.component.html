@@ -1,21 +1,62 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width-device-width">
+
+  <style>
+    #map {
+      height: 400px;
+      width: 100%
+    }
+
+  </style>
+</head>
+
 <div class="container">
-    <div class="row">
-      <div class="profile-image col-4">
-        <img src="../../../assets/dist/lepetit.jpg" alt="">
-      </div>
-      <div class="profile-content col-8">
-        <h4>
-          Restaurante:
-        </h4>
-        <p>{{restaurante.nombre}} </p>
-        <h4>
-          direccion:
-        </h4>
-       <p> {{restaurante.direccion}}</p>
-       <h4>descripcion</h4>
-          {{restaurante.descripcion}}
-      </div>
+  <div class="row">
+    <div class="profile-image col-4">
+      <img src="../../../assets/dist/lepetit.jpg" alt="">
+    </div>
+
+
+
+    <div class="profile-content col-8">
+      <h4>
+        <b>Restaurante:</b>  {{restaurante.nombre}}
+      </h4>
+      <br>
+      <h4>
+        <b>Idioma:</b> {{restaurante.idioma}}
+      </h4>
+      <br>
+      <h4>
+        <b>Direccion:</b> {{restaurante.direccion}}
+      </h4>
+      <br>
+      <h4>
+        <b>Descripcion:</b> {{restaurante.descripcion}}
+      </h4>
+      <br>
+      <h4>
+        <b>Mapa:</b>
+      </h4>
+      <agm-map [latitude]="latitud" [longitude]="longitud" [zoom]="10">
+          <agm-marker [latitude]="restaurante.latitud" [longitude]="restaurante.longitud"></agm-marker>
+      </agm-map>
     </div>
   </div>
-  
-  
+</div>
+<div class="container"></div>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEAS9L6v5iaHc1Ru9i_cAeSyKkji4oyVk&callback=initMap">
+  </script>
+
+  <script>
+    var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 42.3601, lng: -70.9495 },
+        zoom: 13
+      });
+    }
+  </script>

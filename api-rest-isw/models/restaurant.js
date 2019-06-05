@@ -10,7 +10,8 @@ idioma:String,
 imagen: String,
 descripcion: String,
 latitud: Number,
-longitud: Number
+longitud: Number,
+mapa: String
 })
 
 module.exports = mongoose.model('Restaurant', RestaurantSchema)

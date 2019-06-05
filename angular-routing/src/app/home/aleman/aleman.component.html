@@ -1,0 +1,19 @@
+<div class="lista-restaurantes container">
+    <h1>Restaurantes más visitados.</h1>
+    <hr>
+    <div class="row">
+        <div class="contenido card col-3 mx-3 my-4" *ngFor="let restaurante of restaurantes" style="width: 18rem;">
+            <img class="card-img-top" src="../../../assets/dist/india.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{restaurante.nombre}}</h5>
+                <p class="card-text">{{restaurante.idioma}} <br>{{restaurante.descripcion}}</p>
+                <p>{{restaurante.direccion}}</p>
+                <p>{{restaurante.id}}</p>
+                <div class="text-center">
+                    <a value="Ver" class="text-center btn btn-primary" [routerLink]="['/restaurant',restaurante._id]">Ver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

@@ -13,21 +13,22 @@ export class DashboardComponent implements OnInit {
   public userInfo : object;
   //datos de restaurante
   public restaurantes =[];
-  public restaurants = new Object;
+  public restaurants;//aqui estaba el error 
   constructor(
     private _authService: AuthService,
     private _restaurantsService: RestauranteApiService
-  ){ }
-
-  ngOnInit() {
-    this._authService.getUserData().then(data=>{
-      this.userInfo = data;
-    this.getRestaurants();
-    });
-  }
-
-  public getRestaurants(){
-
+    ){ }
+    
+    ngOnInit() {
+      console.log(localStorage)
+      this._authService.getUserData().then(data=>{
+        this.userInfo = data;
+        this.getRestaurants();
+      });
+    }
+    
+    public getRestaurants(){
+      
     this._restaurantsService.getRestaurants().then(
       response =>{
         console.log(response);
@@ -44,11 +45,8 @@ export class DashboardComponent implements OnInit {
   }
 
   public llenarRestaurantes(response){
-
     response.forEach(restaurante => {
       this.restaurantes.push(restaurante)
     });
-
   }
-
 }
