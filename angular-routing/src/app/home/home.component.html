@@ -37,6 +37,21 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/perfil">Perfil</a>
           </li>
+          <li class="nav-item" class="navbarNavDropdown">
+              <div class="dropdown">
+                <a class="nav-link"
+                   id="dropdownMenu1" data-toggle="dropdown"
+                  >
+                  Idiomas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <a class="dropdown-item" routerLink="/ingles">Ingles</a>
+                  <a class="dropdown-item" routerLink="/frances">Frances</a>
+                  <a class="dropdown-item" routerLink="/aleman">Alemán</a>
+
+                </div>
+              </div>
+            </li>
           <li class="nav-item">
             <a class="nav-link" (click)="logoutAction()">Salir</a>
           </li>

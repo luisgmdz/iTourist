@@ -35,7 +35,7 @@ export class FrancesComponent implements OnInit {
       response =>{
         console.log(response);
         console.log("Obtuvimos los bares correctamente");
-        //this.llenarRestaurantes(response.restaurants);
+        this.llenarRestaurantes(response.restaurants);//esta
       },
       error =>{
         console.log("ERROR");

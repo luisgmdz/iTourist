@@ -33,7 +33,7 @@ export class DashboardComponent implements OnInit {
       response =>{
         console.log(response);
         console.log("Obtuvimos los bares correctamente");
-        this.llenarRestaurantes(response.restaurants);
+        this.llenarRestaurantes(response.restaurants);//esta linea
       },
       error =>{
         console.log("ERROR");

@@ -5,8 +5,11 @@
     <div class="frame">
       <div class="nav">
         <ul class="links">
+          <img src="../../../assets/images/Logoo.png" alt="" width="80" height="80">
           <li class="signin-active"><a class="btn">Iniciar sesión</a></li>
           <li class="signup-inactive"><a class="btn">Registrarse</a></li>
+          <img src="../../../assets/images/icon.png" alt="" width="80" height="80">
+
         </ul>
       </div>
       <div ng-app ng-init="checked = false">
@@ -24,9 +27,9 @@
             <label for="fullname">Nombre</label>
             <input class="form-styling" type="text" name="nombre" placeholder="Nombre" [(ngModel)]="postData.nombre"/>
             <label for="fullname">Apellido</label>
-            <input class="form-styling" type="text" name="apellidp" placeholder="Apellido" [(ngModel)]="postData.apellidp"/>
+            <input class="form-styling" type="text" name="apellido" placeholder="Apellido" [(ngModel)]="postData.apellido"/>
             <label for="fullname">Idioma</label>
-            <input class="form-styling" type="text" name="fullname" placeholder="Nombre" [(ngModel)]="postData.idioma"/>
+            <input class="form-styling" type="text" name="fullname" placeholder="Idioma" [(ngModel)]="postData.idioma"/>
             <label for="email">Email</label>
             <input class="form-styling" type="text" id="email" name="email" placeholder="ejemplo@gmail.com"
               onkeyup="validarEmail(this)" [(ngModel)]="postData.email" />
@@ -39,17 +42,14 @@
             <input class="form-styling" id="password2" type="password" name="password2" onkeyup="validarContrasena(this)"
               size="20" placeholder="Contraseña" [(ngModel)]="postData.password"/>
             <label id="resultPass"></label>
-            <a ng-click="checked = !checked" class="button is-primary" (click)="registerAction()">Registrarme</a>
+            <div class="btn-animate">
+                <a ng-click="checked = !checked" class="btn-signin" (click)="registerAction()">Registrarme</a>
+            </div>
+            
   
   
           </form>
-  
-        
       </div>
-
-      
-
-  
     </div>
   </div>
 

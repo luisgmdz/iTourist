@@ -37,7 +37,7 @@ function signIn(req, res) {
       if(err) return res.status(500).send({message: err})
       if(!isMatch) return res.status(401).send({message:"Acceso denegado"})
       req.user = user
-      return res.status(200).send({ message:"Te has logeado correctamente", token: service.createToken(user)})
+      return res.status(200).send({ message:"Te has logeado correctamente", token: service.createToken(user), user:user  })
     })
 
   })

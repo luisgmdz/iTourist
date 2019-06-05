@@ -13,6 +13,7 @@ import { log } from 'util';
 })
 export class LoginComponent implements OnInit {
   public token;
+  public usuario;
   public status;
 
   public postData = {
@@ -45,11 +46,13 @@ export class LoginComponent implements OnInit {
     .subscribe(
       response =>{
         this.token = response.token;
+        this.usuario = response.user ;
         if(this.token.lenght<=0){
           this.status="error";
         }else{
           this.status="success";
           sessionStorage.setItem("token", this.token);
+          sessionStorage.setItem("usuario", JSON.stringify(this.usuario));
          // console.log(this.token);
           this._router.navigate(['']);
         }

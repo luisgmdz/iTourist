@@ -33,7 +33,7 @@ export class InglesComponent implements OnInit {
     this._restaurantsService.getRestaurants().then(
       response =>{
         console.log("Obtuvimos los bares correctamente");
-        //this.llenarRestaurantes(response.restaurants);
+        this.llenarRestaurantes(response.restaurants);//esta
       },
       error =>{
         console.log("ERROR");
